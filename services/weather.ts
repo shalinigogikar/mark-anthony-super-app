@@ -1,0 +1,9 @@
+import axios from "axios";
+
+export async function getWeather() {
+  const response = await axios.get(
+    "https://api.open-meteo.com/v1/forecast?latitude=17.385&longitude=78.4867&current=temperature_2m,relative_humidity_2m,wind_speed_10m"
+  );
+
+  return response.data;
+}
